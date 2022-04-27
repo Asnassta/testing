@@ -126,10 +126,11 @@ body.hidden {
 
 .subscribe {
 	position: relative;
+	min-width: 309px;
 	input {
 		appearance: none;
 		width: 100%;
-		padding-right: 105px;
+		padding-right: 50px;
 		padding-bottom: 14px;
 		border-bottom: 1px solid $dgray;
 		border-radius: 0;
@@ -1273,6 +1274,11 @@ body.hidden {
 	}
 }
 @media(max-width: 376px) {
+	.intro {
+		&__subscribe {
+			min-width: 100%;
+		}
+	}
 	.logo {
 		&__title {
 			font-size: 12px;
