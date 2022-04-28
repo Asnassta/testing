@@ -186,6 +186,13 @@ $(".search-drop__close").on("click", function(){
   });
   /*==========/data-nav (dropdown)=========*/
 
+  /*======Article-box__details=============*/
+  $(".article-box__details").on("click", function() {
+    $(this).toggleClass("drop");
+    $(this).parents(".article-box").find(".article-box__text-details").slideToggle();
+  });
+  /*==========/article-box__details=========*/
+
   /*===============overview-modal=================*/
   $(".overview-open").on("click", function(event) {
     event.preventDefault();

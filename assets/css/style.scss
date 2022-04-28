@@ -494,6 +494,7 @@ body.hidden {
 	&__item {
 		position: relative;
 		padding: 65px 0 32px;
+		height: 630px;
 	}
 	&__photo {
 		position: absolute;
@@ -515,6 +516,7 @@ body.hidden {
 		padding: 50px 40px 30px 50px;
 		width: calc(50% - 15px);
 		margin-left: auto;
+		max-height: 100%;
 	}
 	&__title {
 		font-family: $ff;
@@ -1038,12 +1040,12 @@ body.hidden {
 			}
 		}
 	}
-}
-@media(max-width: 992px) {
 	.intro {
 		margin-bottom: 100px;
 		&__item {
 			padding: 40px 10px 60px;
+			height: auto;
+			min-height: 350px;
 		}
 		&__box {
 			padding: 15px;
@@ -1066,6 +1068,8 @@ body.hidden {
 			}
 		}
 	}
+}
+@media(max-width: 992px) {
 	.previews {
 		&-box {
 			&__photo {
@@ -1236,6 +1240,11 @@ body.hidden {
 	}
 }
 @media(max-width: 414px) {
+	.intro {
+		&__item {
+			min-height: 455px;
+		}
+	}
 	.service {
 		&__inner {
 			margin-left: 0;
