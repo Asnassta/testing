@@ -193,6 +193,14 @@ $(".search-drop__close").on("click", function(){
   });
   /*==========/article-box__details=========*/
 
+  /*======Article-reviews__show=============*/
+  $(".article-reviews__show").on("click", function(event) {
+    event.preventDefault();
+    $(".article-reviews__hide").slideToggle(333);
+
+  });
+  /*==========/article-reviews__show=========*/
+
   /*===============overview-modal=================*/
   $(".overview-open").on("click", function(event) {
     event.preventDefault();
