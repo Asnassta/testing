@@ -102,6 +102,24 @@ body.hidden {
 	&:hover {
 		color: $red;
 	}
+	&_long {
+		&:before {
+			background: url("../images/encircle-decor2.svg") center no-repeat;
+			background-size: contain;
+		}
+	}
+	&_small {
+		&:before {
+			background: url("../images/encircle-decor_small.svg") center no-repeat;
+			background-size: contain;
+		}
+	}
+	&_medium {
+		&:before {
+			background: url("../images/encircle-decor_medium.svg") center no-repeat;
+			background-size: contain;
+		}
+	}
 }
 
 .slider-arrow {
