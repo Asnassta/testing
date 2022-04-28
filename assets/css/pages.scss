@@ -1899,6 +1899,11 @@ margin-top: 50px;
 					font-size: 30px;
 				}
 			}
+			.links-row {
+				a {
+					margin-right: 0;
+				}
+			}
 		}
 		&-popular {
 			&__inner {
@@ -1963,6 +1968,27 @@ margin-top: 50px;
 			}
 		}
 	}
+	.links-row {
+		.btn {
+			margin-right: 0;
+			width: 100%;
+			font-size: 14px;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				background: url("../images/encircle-decor2.svg") center no-repeat;
+				background-size: contain;
+			}
+			&_small, &_medium {
+				&:before {
+					background: url("../images/encircle-decor2.svg") center no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+	} 
 }
 @media(max-width: 414px) {
 	.article {
@@ -1971,6 +1997,7 @@ margin-top: 50px;
 				.btn {
 					width: 100%;
 					font-size: 14px;
+					margin-right: 0;
 					&:before {
 						background: url("../images/encircle-decor2.svg") center no-repeat;
 						background-size: contain;
@@ -1988,6 +2015,11 @@ margin-top: 50px;
 			}
 		}
 	}
+	.links-row {
+		.btn {
+			margin-bottom: 0;
+		}
+	} 
 	.page {
 		&__header {
 			margin-bottom: 50px;
