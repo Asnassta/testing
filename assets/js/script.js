@@ -217,6 +217,14 @@ $(".search-drop__close").on("click", function(){
   });
 /*==============/overview-modal=================*/
 
+ /*======Story__text (dropdown)=============*/
+  $(".story-teller").on("click", function() {
+    $(this).toggleClass("dropdown");
+    $(this).next().slideToggle();
+
+  });
+  /*==========/story__text (dropdown)=========*/
+
   /*===========Slider-Intro============*/
   $('.intro__slider').slick({
   	infinite: true,
@@ -316,4 +324,273 @@ $(".search-drop__close").on("click", function(){
 
       articleAbout();
   /*===========/article-about============*/
+
+  /*===========Bookshelf-intro__slider============*/
+  $('.bookshelf-intro__slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.bookshelf-intro__arrow .slider-arrow_prev'),
+    nextArrow: $('.bookshelf-intro__arrow .slider-arrow_next'),
+    responsive: [
+     {
+       breakpoint: 1401,
+      settings: {
+        infinite: true,
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    }
+      }
+  ]
+  });
+  /*===========/bookshelf-intro__slider============*/
+
+  /*===========Bookself__slider============*/
+  $('.bookself__block_1 .bookself__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: $('.bookself__block_1 .bookself__arrow-next'),
+    responsive: [
+     {
+       breakpoint: 1025,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_1 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 769,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_1 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 601,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      },
+  ]
+  });
+  /*===========/bookself__slider============*/
+
+  /*===========Bookself__slider============*/
+  $('.bookself__block_2 .bookself__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: $('.bookself__block_2 .bookself__arrow-next'),
+    responsive: [
+     {
+       breakpoint: 1025,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_1 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 769,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_1 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 601,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      },
+  ]
+  });
+  /*===========/bookself__slider============*/
+  /*===========Bookself__slider============*/
+  $('.bookself__block_3 .bookself__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: $('.bookself__block_3 .bookself__arrow-next'),
+    responsive: [
+     {
+       breakpoint: 1025,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_3 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 769,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_3 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 601,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      },
+  ]
+  });
+  /*===========/bookself__slider============*/
+  /*===========Bookself__slider============*/
+  $('.bookself__block_4 .bookself__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: $('.bookself__block_4 .bookself__arrow-next'),
+    responsive: [
+     {
+       breakpoint: 1025,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_4 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 769,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_4 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 601,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      },
+  ]
+  });
+  /*===========/bookself__slider============*/
+  /*===========Bookself__slider============*/
+  $('.bookself__block_5 .bookself__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: $('.bookself__block_5 .bookself__arrow-next'),
+    responsive: [
+     {
+       breakpoint: 1025,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_5 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 769,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_5 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 601,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      },
+  ]
+  });
+  /*===========/bookself__slider============*/
+  /*===========Bookself__slider============*/
+  $('.bookself__block_6 .bookself__slider').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: $('.bookself__block_6 .bookself__arrow-next'),
+    responsive: [
+     {
+       breakpoint: 1025,
+        settings: {
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_6 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 769,
+        settings: {
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: $('.bookself__block_6 .bookself__arrow-next'),
+        }
+      },
+      {
+       breakpoint: 601,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        }
+      },
+  ]
+  });
+  /*===========/bookself__slider============*/
 })
