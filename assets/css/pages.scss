@@ -994,6 +994,14 @@
 			}
 		}
 	}
+	&__subtitle {
+		font-family: $ff;
+		font-size: 19px;
+		font-weight: 500;
+		color: $bl;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
 	&__text {
 		font-family: $ff;
 		font-size: 15px;
@@ -1079,6 +1087,18 @@
 			svg {
 				transform: rotate(180deg);
 			}
+		}
+		&_grafit {
+			color: $grafit;
+			svg {
+				fill: $grafit;
+			}
+		}
+	}
+	&__btn {
+		margin-top: 30px;
+		.btn_medium {
+			min-width: 270px;
 		}
 	}
 	.links-row {
@@ -1801,7 +1821,7 @@ margin-top: 50px;
 	margin-bottom: 100px;
 	.slick-dots {
 		button {
-			width: 80px;
+			width: 78px;
 		}
 	}
 	&__inner {
@@ -1911,7 +1931,45 @@ margin-top: 50px;
 }
 /*=======/story=======*/
 
-
+/*=========Communication======*/
+.communication {
+	&__title {
+		font-family: $ff;
+		font-size: 45px;
+		font-weight: 500;
+		color: $bl;
+		line-height: 1.2;
+		margin-bottom: 15px;
+	}
+	&__subtitle {
+		font-family: $ff;
+		font-size: 23px;
+		font-weight: 500;
+		color: $bl;
+		line-height: 1.2;
+		margin-bottom: 30px;
+	}
+	&__text {
+		font-family: $ff;
+		font-size: 15px;
+		font-weight: 400;
+		color: $bl;
+		line-height: 1.5;
+		margin-bottom: 30px;
+		max-width: 700px;
+	}
+	&__subscribe {
+		width: 278px;
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.subscribe {
+			min-width: 278px;
+		}
+	}
+}
+/*=========/communication======*/
 
 /*========Adaptive======*/
 @media(max-width: 1300px) {
@@ -2090,6 +2148,14 @@ margin-top: 50px;
 			}
 		}
 	}
+	.communication {
+		&__title {
+			font-size: 30px;
+		}
+		&__subtitle {
+			font-size: 19px;
+		}
+	}
 	.bookshelf-intro {
 		&__item {
 			padding: 0;
@@ -2264,6 +2330,11 @@ margin-top: 50px;
 					width: 100%;
 				}
 			}
+			&_reverse {
+				.article-box__inner {
+					flex-direction: column;
+				}
+			}
 			&__inner {
 				margin-left: 0;
 				flex-direction: column-reverse;
@@ -2362,8 +2433,6 @@ margin-top: 50px;
 			}
 		}
 	}
-}
-@media(max-width: 600px) {
 	.bookself {
 		.section__title {
 			border-bottom: none;

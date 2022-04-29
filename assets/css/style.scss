@@ -183,6 +183,43 @@ body.hidden {
 			}
 		}
 	}
+	&__title {
+		font-family: $ff;
+		font-size: 19px;
+		font-weight: 500;
+		color: $bl;
+		line-height: 1.3;
+		margin-bottom: 15px;
+	}
+	&__link {
+		display: block;
+		width: 100%;
+		padding-right: 50px;
+		font-family: $ff;
+		font-size: 15px;
+		font-weight: 400;
+		color: $dgray;
+		position: relative;
+		transition: all .2s linear;
+		span {
+			position: absolute;
+			top: 2px;
+			right: 5px;
+			z-index: 1;
+		}
+		svg {
+			width: 34px;
+			height: 10.5px;
+			fill: $dgray;
+			transition: all .2s linear;
+		}
+		&:hover {
+			color: $red;
+			svg {
+				fill: $red;
+			}
+		}
+	}
 }
 
 .social {
