@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Pechorin</title>
+</head>
+<body>
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="arrow" viewBox="0 0 12 16">
+			<g>
+				<path d="M6.5 1C6.5 0.723858 6.27614 0.5 6 0.5C5.72386 0.5 5.5 0.723858 5.5 1H6.5ZM6 15L5.64645 15.3536C5.84171 15.5488 6.15829 15.5488 6.35355 15.3536L6 15ZM11.3536 10.3536C11.5488 10.1583 11.5488 9.84171 11.3536 9.64645C11.1583 9.45118 10.8417 9.45118 10.6464 9.64645L11.3536 10.3536ZM1.35355 9.64645C1.15829 9.45118 0.841709 9.45118 0.646446 9.64645C0.451184 9.84171 0.451184 10.1583 0.646446 10.3536L1.35355 9.64645ZM5.5 1L5.5 15H6.5L6.5 1H5.5ZM6.35355 15.3536L11.3536 10.3536L10.6464 9.64645L5.64645 14.6464L6.35355 15.3536ZM6.35355 14.6464L1.35355 9.64645L0.646446 10.3536L5.64645 15.3536L6.35355 14.6464Z"/>
+			</g>
+		</symbol>
+		<symbol id="close" viewBox="0 0 10 10" fill="none">
+			<g>
+				<path d="M0.5 9.5L9.5 0.5M0.5 0.5L9.5 9.5" stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-small" viewBox="0 0 12 7">
+			<g>
+				<path d="M1.35265 0.607183C1.15728 0.412032 0.840695 0.412212 0.645544 0.607585C0.450393 0.802959 0.450573 1.11954 0.645946 1.31469L1.35265 0.607183ZM6.00499 5.96094L5.65164 6.31469C5.74546 6.40841 5.87267 6.46101 6.00528 6.46094C6.13788 6.46086 6.26503 6.40811 6.35875 6.31429L6.00499 5.96094ZM11.3531 1.31429C11.5482 1.11892 11.548 0.802334 11.3526 0.607183C11.1573 0.412032 10.8407 0.412212 10.6455 0.607586L11.3531 1.31429ZM0.645946 1.31469L5.65164 6.31469L6.35834 5.60718L1.35265 0.607183L0.645946 1.31469ZM6.35875 6.31429L11.3531 1.31429L10.6455 0.607586L5.65124 5.60759L6.35875 6.31429Z"/>
+			</g>
+		</symbol>
+		<symbol id="comments-icon" viewBox="0 0 18 16" fill="none">
+			<g>
+				<path d="M0.5 10V2C0.5 1.44772 0.947715 1 1.5 1H16.5C17.0523 1 17.5 1.44772 17.5 2V10C17.5 10.5523 17.0523 11 16.5 11H14.5898C14.5327 11 14.4783 11.0244 14.4403 11.0671L10.6747 15.3034C10.6137 15.3721 10.5 15.3289 10.5 15.237V11.2C10.5 11.0895 10.4105 11 10.3 11H1.5C0.947715 11 0.5 10.5523 0.5 10Z"/>
+				<path d="M4 4H7H10M12.5 4H12"  stroke-linecap="round" stroke-linejoin="round"/>
+			</g>
+		</symbol>
+		<symbol id="search" viewBox="0 0 20 20">
+			<g>
+				<path d="M18.2926 19.7068C18.6829 20.0975 19.3161 20.0978 19.7068 19.7074C20.0975 19.3171 20.0978 18.6839 19.7074 18.2932L18.2926 19.7068ZM14.6588 14.6549L15.3662 13.9481C15.1781 13.7598 14.9228 13.6543 14.6566 13.6549C14.3905 13.6555 14.1356 13.7621 13.9483 13.9512L14.6588 14.6549ZM15.4803 11.6525C15.2708 12.1635 15.5153 12.7476 16.0264 12.957C16.5374 13.1664 17.1215 12.9219 17.3309 12.4109L15.4803 11.6525ZM9 16C5.13401 16 2 12.866 2 9H0C0 13.9706 4.02944 18 9 18V16ZM2 9C2 5.13401 5.13401 2 9 2V0C4.02944 0 0 4.02944 0 9H2ZM9 2C12.866 2 16 5.13401 16 9H18C18 4.02944 13.9706 0 9 0V2ZM19.7074 18.2932L15.3662 13.9481L13.9514 15.3617L18.2926 19.7068L19.7074 18.2932ZM13.9483 13.9512C12.6819 15.2298 10.95 16 9 16V18C11.4961 18 13.736 17.0076 15.3693 15.3586L13.9483 13.9512ZM16 9C16 9.94072 15.815 10.8357 15.4803 11.6525L17.3309 12.4109C17.7625 11.3576 18 10.2053 18 9H16Z"/>
+			</g>
+		</symbol>
+		<symbol id="arrow-long" viewBox="0 0 41 15">
+			<g>
+				<path d="M40 7.5L40.3817 7.82297C40.5394 7.63655 40.5394 7.36345 40.3817 7.17703L40 7.5ZM0 8H40V7H0V8ZM39.6183 7.17703L34.1183 13.677L34.8817 14.323L40.3817 7.82297L39.6183 7.17703ZM40.3817 7.17703L34.8817 0.677029L34.1183 1.32297L39.6183 7.82297L40.3817 7.17703Z"/>
+			</g>
+		</symbol>
+		<symbol id="yt-icon" viewBox="0 0 16 12">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.869 1.06979C14.5115 1.24277 15.0181 1.74935 15.191 2.39186C15.5123 3.56566 15.4999 6.0121 15.4999 6.0121C15.4999 6.0121 15.4999 8.4462 15.191 9.62C15.0181 10.2625 14.5115 10.7691 13.869 10.9421C12.6952 11.251 7.99997 11.251 7.99997 11.251C7.99997 11.251 3.31712 11.251 2.13097 10.9297C1.48846 10.7567 0.981876 10.2501 0.808895 9.60764C0.5 8.44619 0.5 5.99975 0.5 5.99975C0.5 5.99975 0.5 3.56566 0.808895 2.39186C0.981876 1.74935 1.50082 1.23041 2.13097 1.05743C3.30477 0.748535 7.99997 0.748535 7.99997 0.748535C7.99997 0.748535 12.6952 0.748535 13.869 1.06979ZM10.4093 5.99975L6.50491 8.2485L6.50491 3.75099L10.4093 5.99975Z"/>
+			</g>
+		</symbol>
+		<symbol id="tw-icon" viewBox="0 0 15 13">
+			<g>
+				<path d="M12.8812 3.40625C12.8812 3.5375 12.8812 3.66875 12.8812 3.78125C12.8812 7.6625 9.91875 12.1438 4.51875 12.1438C2.85 12.1438 1.3125 11.6563 0 10.8313C0.225 10.85 0.46875 10.8688 0.69375 10.8688C2.0625 10.8688 3.3375 10.4 4.35 9.6125C3.05625 9.59375 1.96875 8.73125 1.6125 7.56875C1.8 7.60625 1.96875 7.625 2.175 7.625C2.4375 7.625 2.7 7.5875 2.94375 7.5125C1.59375 7.25 0.58125 6.06875 0.58125 4.64375C0.58125 4.625 0.58125 4.625 0.58125 4.60625C0.975 4.83125 1.425 4.9625 1.9125 4.98125C1.125 4.45625 0.6 3.55625 0.6 2.525C0.6 1.98125 0.75 1.475 0.99375 1.04375C2.4375 2.825 4.6125 3.9875 7.05 4.11875C6.99375 3.9125 6.975 3.66875 6.975 3.44375C6.975 1.8125 8.2875 0.5 9.91875 0.5C10.7625 0.5 11.5312 0.85625 12.0562 1.41875C12.7312 1.2875 13.35 1.04375 13.9312 0.70625C13.7062 1.4 13.2375 1.9625 12.6375 2.3375C13.2375 2.2625 13.8 2.1125 14.325 1.86875C13.95 2.46875 13.4625 2.99375 12.8812 3.40625Z"/>
+			</g>
+		</symbol>
+		<symbol id="vk-icon" viewBox="0 0 16 11">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M15.6329 1.26742C15.7442 0.896587 15.6329 0.624023 15.1035 0.624023L13.3531 0.624023C12.908 0.624023 12.703 0.859453 12.5917 1.11914C12.5917 1.11914 11.7015 3.28877 10.4404 4.6981C10.0325 5.10607 9.84705 5.23572 9.62449 5.23572C9.51322 5.23572 9.35218 5.10607 9.35218 4.73523V1.26742C9.35218 0.82232 9.22303 0.624023 8.85207 0.624023L6.10142 0.624023C5.82336 0.624023 5.65607 0.830572 5.65607 1.02637C5.65607 1.44834 6.28647 1.54561 6.35148 2.73239L6.35148 5.31012C6.35148 5.87525 6.24946 5.97777 6.02691 5.97777C5.43352 5.97777 3.99018 3.79826 3.13398 1.30456C2.96619 0.819819 2.7979 0.624023 2.35055 0.624023L0.60014 0.624023C0.100023 0.624023 0 0.859453 0 1.11914C0 1.58275 0.593513 3.88228 2.76314 6.92349C4.20973 9.00023 6.24746 10.1262 8.10189 10.1262C9.21465 10.1262 9.35218 9.87618 9.35218 9.44545V7.87571C9.35218 7.3756 9.45758 7.27583 9.80979 7.27583C10.0696 7.27583 10.5146 7.40561 11.5532 8.40696C12.74 9.59362 12.9355 10.1262 13.6032 10.1262H15.3536C15.8537 10.1262 16.1038 9.87618 15.9595 9.38269C15.8017 8.89083 15.2351 8.17741 14.4831 7.33146C14.0752 6.84923 13.4631 6.32998 13.2778 6.07042C13.0182 5.73659 13.0923 5.58831 13.2778 5.29174C13.2778 5.29174 15.4103 2.28754 15.6329 1.26755V1.26742Z"/>
+			</g>
+		</symbol>
+		<symbol id="dz-icon" viewBox="0 0 16 16">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7.76025 0C7.71996 3.24308 7.4986 5.06587 6.28223 6.28222C5.06587 7.49862 3.2431 7.72 0 7.76025V8.23975C3.2431 8.28005 5.06587 8.50143 6.28223 9.71778C7.4986 10.9341 7.71996 12.7569 7.76025 16H8.23975C8.28004 12.7569 8.5014 10.9341 9.71777 9.71778C10.9341 8.50143 12.7569 8.28005 16 8.23975V7.76025C12.7569 7.71995 10.9341 7.49862 9.71777 6.28222C8.5014 5.06587 8.28004 3.24308 8.23975 0H7.76025Z"/>
+			</g>
+		</symbol>
+		<symbol id="share-icon" viewBox="0 0 14 12">
+			<g>
+				<path d="M10.3703 9.87313V10.5834C10.3703 10.896 10.1004 11.0806 9.7879 11.0806H0.511411C0.19888 11.0806 0 10.9102 0 10.5834L0 3.55149C0 3.23896 0.19888 2.95484 0.511411 2.95484H2.17351C2.48604 2.95484 2.74175 3.21054 2.74175 3.52307C2.74175 3.8356 2.48604 4.09131 2.17351 4.09131H1.13648V9.94416H9.23386V9.87313C9.23386 9.5606 9.48957 9.30489 9.8021 9.30489C10.1288 9.29069 10.3703 9.5606 10.3703 9.87313ZM12.899 4.57432L9.37592 8.16842C9.20545 8.33889 8.96395 8.38151 8.75086 8.29628C8.53777 8.21104 8.39571 7.99795 8.39571 7.77065V6.2222C7.25924 6.19379 4.5317 6.30744 3.53728 8.05477C3.43784 8.23945 3.23896 8.35309 3.04008 8.35309C2.99746 8.35309 2.94063 8.3531 2.89802 8.33889C2.64231 8.26786 2.47184 8.04056 2.47184 7.78486C2.47184 7.68542 2.47183 5.4977 4.11972 3.86402C5.15676 2.81278 6.54894 2.24454 8.39571 2.1451V0.568239C8.39571 0.340944 8.53777 0.127853 8.75086 0.0426169C8.96395 -0.0426187 9.21966 2.563e-06 9.37592 0.170474L12.9132 3.76458C13.1263 3.99187 13.1263 4.34702 12.899 4.57432ZM11.6773 4.16234L9.51798 1.97463V2.67072C9.51798 2.98325 9.27648 3.23895 8.94975 3.23895C7.18821 3.23895 5.83864 3.70775 4.91525 4.64535C4.48908 5.07153 4.20496 5.54032 4.02028 5.99491C5.35564 5.19938 7.04615 5.05731 8.08319 5.05731C8.62301 5.05731 8.97816 5.09994 9.02078 5.09994C9.30489 5.12835 9.51798 5.38406 9.51798 5.66818V6.36426L11.6773 4.16234Z"/>
+				<path d="M11.6773 4.16234L9.51798 1.97463V2.67072C9.51798 2.98325 9.27648 3.23895 8.94975 3.23895C7.18821 3.23895 5.83864 3.70775 4.91525 4.64535C4.48908 5.07153 4.20496 5.54032 4.02028 5.99491C5.35564 5.19938 7.04615 5.05731 8.08319 5.05731C8.62301 5.05731 8.97816 5.09994 9.02078 5.09994C9.30489 5.12835 9.51798 5.38406 9.51798 5.66818V6.36426L11.6773 4.16234Z"/>
+			</g>
+		</symbol>
+		<symbol id="fb-icon" viewBox="0 0 9 16">
+			<g>
+				<path d="M5.80147 15.9999V8.70155H8.25125L8.61802 5.85726H5.80147L5.80147 4.04126C5.80147 3.21779 6.03017 2.65655 7.21114 2.65655L8.7173 2.65585V0.111955C8.45669 0.0774178 7.56268 0 6.52257 0C4.35101 0 2.86432 1.32545 2.86432 3.75971V5.85733H0.408203L0.408203 8.70163H2.86424L2.86424 16L5.80147 15.9999Z"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 15 14">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M10.6675 12.942C11.5063 13.309 11.8208 12.5401 11.8208 12.5401L14.04 1.39168C14.0226 0.640292 13.0091 1.09462 13.0091 1.09462L0.585011 5.96988C0.585011 5.96988 -0.00910739 6.17957 0.0433148 6.54653C0.095737 6.91348 0.567537 7.08822 0.567537 7.08822L3.69539 8.13667C3.69539 8.13667 4.63899 11.2296 4.83121 11.8237C5.00595 12.4003 5.16322 12.4178 5.16322 12.4178C5.33796 12.4877 5.49522 12.3654 5.49522 12.3654L7.52221 10.5306L10.6675 12.942ZM11.2092 3.36622C11.2092 3.36622 11.6461 3.10411 11.6286 3.36622C11.6286 3.36622 11.6985 3.40117 11.4714 3.64581C11.2617 3.8555 6.31651 8.29391 5.65249 8.88803C5.60007 8.92298 5.56512 8.9754 5.56512 9.04529L5.37291 10.6879C5.33796 10.8626 5.1108 10.8801 5.05837 10.7228L4.23709 8.0318C4.20215 7.92695 4.23709 7.80464 4.34194 7.73474L11.2092 3.36622Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<!--Header-->
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="/" class="header__logo logo">
+						<div class="logo__icon">
+							<img src="assets/images/logo.png" alt="">
+						</div>
+						<div class="logo__info">
+							<div class="logo__title">Pechorin.net</div>
+							<div class="logo__subtitle">Портал больших литературных<br> возможностей</div>
+						</div>
+					</a>
+					<nav class="header__nav header-nav">
+						<a href="#" class="header__link header-nav__item">РАЖ</a>
+						<a href="#" class="header__link header-nav__item">События</a>
+						<a href="#" class="header__link header-nav__item">Статьи</a>
+						<a href="#" class="header__link header-nav__item">Конкурсы</a>
+						<a href="#" class="header__link header-nav__item">Публикации</a>
+						<a href="#" class="header__link header-nav__item">Услуги</a>
+						<a href="#" class="header__link header-nav__item">Полезное</a>
+						<a href="#" class="header__link header-nav__item">Книжная полка</a>
+						<a href="#" class="header__link header-nav__item">О нас</a>
+					</nav>
+					<div class="header__buttons">
+						<a href="#" class="header__search">
+							<svg>
+								<use xlink:href="#search"></use>
+							</svg>
+						</a>
+						<div class="header__burger burger">
+							<span class="burger__item"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Header-menu-->
+			<div class="header__menu header-menu">
+				<div class="header-menu__box">
+					<div class="header-menu__menu">
+						<div class="header-menu__col">
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">Статьи</a>
+								</div>
+								<ul class="header-menu__list">
+									<li><a href="#" class="header__link">Рецензии</a></li>
+									<li><a href="#" class="header__link">Новости</a></li>
+									<li><a href="#" class="header__link">Мода перевода</a></li>
+									<li><a href="#" class="header__link">Блоги</a></li>
+									<li><a href="#" class="header__link">Интервью</a></li>
+									<li><a href="#" class="header__link">Обзоры</a></li>
+									<li><a href="#" class="header__link">Они ушли. Они остались</a></li>
+									<li><a href="#" class="header__link">Lectoриум</a></li>
+									<li><a href="#" class="header__link">Метаморфозы критики</a></li>
+									<li><a href="#" class="header__link">Забытый Нобель</a></li>
+									<li><a href="#" class="header__link">Здравые смыслы</a></li>
+								</ul>
+							</div>
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">Книжная полка</a>
+								</div>
+							</div>
+						</div>
+						<div class="header-menu__col">
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">Публикации</a>
+								</div>
+								<ul class="header-menu__list">
+									<li><a href="#" class="header__link">Толстые журналы</a></li>
+									<li><a href="#" class="header__link">Печатные издания</a></li>
+									<li><a href="#" class="header__link">Интернет-издания</a></li>
+									<li><a href="#" class="header__link">Иные проекты</a></li>
+									<li><a href="#" class="header__link">Добавить издание</a></li>
+								</ul>
+							</div>
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">РАЖ</a>
+								</div>
+							</div>
+						</div>
+						<div class="header-menu__col">
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">События</a>
+								</div>
+								<ul class="header-menu__list">
+									<li><a href="#" class="header__link">Года</a></li>
+									<li><a href="#" class="header__link">Текущего месяца</a></li>
+								</ul>
+							</div>
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">Конкурсы</a>
+								</div>
+							</div>
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">Полезное</a>
+								</div>
+								<ul class="header-menu__list">
+									<li><a href="#" class="header__link">Писателю</a></li>
+									<li><a href="#" class="header__link">Бесплатные курсы для писателей</a></li>
+									<li><a href="#" class="header__link">Переводчику</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="header-menu__col">
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">Услуги</a>
+								</div>
+								<ul class="header-menu__list">
+									<li><a href="#" class="header__link">Критика</a></li>
+									<li><a href="#" class="header__link">Редактура</a></li>
+									<li><a href="#" class="header__link">Обучение</a></li>
+									<li><a href="#" class="header__link">Иллюстрации</a></li>
+									<li><a href="#" class="header__link">Музыка и звук</a></li>
+									<li><a href="#" class="header__link">Фото и видео</a></li>
+									<li><a href="#" class="header__link">Продюсирование</a></li>
+								</ul>
+							</div>
+							<div class="header-menu__block">
+								<div class="header-menu__title">
+									<a href="#">О нас</a>
+								</div>
+								<ul class="header-menu__list">
+									<li><a href="#" class="header__link">О проекте</a></li>
+									<li><a href="#" class="header__link">Персонажи</a></li>
+									<li><a href="#" class="header__link">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="header-menu__foot">
+						<div class="header-menu__links">
+							<ul>
+								<li><a href="#" class="header-menu__link">Добавить конкурс</a></li>
+								<li><a href="#" class="header-menu__link">Разместить информацию</a></li>
+								<li><a href="#" class="header-menu__link">Реклама</a></li>
+							</ul>
+						</div>
+						<div class="header-menu__social">
+							<div class="header-menu__mail">
+								<a href="mailto:info@pechorin.net" class="header-menu__link">info@pechorin. net  </a>
+							</div>
+							<div class="social">
+								<div class="social__links">
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#yt-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#tw-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#vk-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#fb-icon"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/header-menu-->
+			<div class="search-drop">
+				<div class="container">
+					<div class="search-drop__close"></div>
+					<form action="#">
+						<div class="search-drop__box">
+							<input type="text" placeholder="Поиск...">
+							<button type="submit">
+								<svg>
+									<use xlink:href="#arrow-long"></use>
+								</svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div><!--/search-drop-->
+		</header>
+		<!--/header-->
+		<main class="main page page_events-month">
+			<!--Page__header-->
+			<div class="page__header">
+				<div class="container">
+					<!--Breadcrumbs-->
+					<div class="breadcrumbs">
+						<a href="#" class="breadcrumbs__item">Главная</a>
+						<a href="#" class="breadcrumbs__item">Статьи</a>
+						<a href="#" class="breadcrumbs__item">Рецензии</a>
+					</div><!--/breadcrumbs-->
+					<h1 class="page__title page__title_line page__title_mb-0">Январь</h1>
+				</div>
+			</div><!--/page__header-->
+			<!--Events-->
+			<section class="events section">
+				<div class="container">
+					<div class="events__inner">
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">12.01.22</div>
+										<div class="events-box__time">18:00 </div>
+									</div>
+									<div class="events-box__place">CWS. Онлайн. Бесплатно</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Вебинар с Майей Кучерской «Разнообразие писательских школ: добро или зло. Можно ли научить писать?»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">CWS. Онлайн. Бесплатно</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_1.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">13.01.22</div>
+										<div class="events-box__time">17:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория.</p>
+										<p>Вход свободный.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Воркшоп «Русская Википедия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии.</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория.</p>
+										<p>Вход свободный.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_2.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">14.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_3.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">15.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/previews-news_2.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">12.01.22</div>
+										<div class="events-box__time">18:00 </div>
+									</div>
+									<div class="events-box__place">CWS. Онлайн. Бесплатно</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Вебинар с Майей Кучерской «Разнообразие писательских школ: добро или зло. Можно ли научить писать?»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">CWS. Онлайн. Бесплатно</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_1.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">13.01.22</div>
+										<div class="events-box__time">17:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория.</p>
+										<p>Вход свободный.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Воркшоп «Русская Википедия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии.</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория.</p>
+										<p>Вход свободный.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_3.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">14.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/previews-news_1.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">15.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/previews-news_2.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">15.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_2.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">15.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/book-small.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">15.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_3.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">15.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/book.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+						<!--Events-box-->
+						<div class="events-box">
+							<div class="events-box__inner">
+								<div class="events-box__datablock">
+									<div class="events-box__datatime">
+										<div class="events-box__data">15.01.22</div>
+										<div class="events-box__time">16:00 </div>
+									</div>
+									<div class="events-box__place">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+								</div>
+								<div class="events-box__info">
+									<div class="events-box__title">
+										<a href="#">Экскурсия по мемориальной экспозиции «Гоголь — загадка третьего тысячелетия»</a>
+									</div>
+									<div class="events-box__description">В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем вас на мастер-класс, где будет рассказано о том, как редактировать уже имеющиеся и создавать новые статьи в русской Википедии. В воскресенье ждем васВикипедии. В воскресенье ждем вас ...</div>
+									<div class="events-box__place-mobile">
+										<p>Библиотека им. Некрасова, 503 аудитория. </p>
+										<p>По билетам.</p>
+									</div>
+									<div class="events-box__links">
+										<a href="#" class="events-box__detail">подробно</a>
+										<div class="social">
+											<div class="social__links">
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#vk-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#fb-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tw-icon"></use>
+													</svg>
+												</a>
+												<a href="#" class="social__icon" target="blank">
+													<svg>
+														<use xlink:href="#tg-icon"></use>
+													</svg>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="events-box__photo">
+									<img src="assets/images/events-photo_1.png" alt="">
+								</a>
+							</div>
+						</div><!--/events-box-->
+					</div>
+				</div>
+			</section><!--/events-->
+			<!--Pagin-->
+			<div class="pagin section">
+				<div class="container">
+					<div class="pagin__inner">
+						<a href="#" class="btn pagin-download">Загрузить еще</a>
+						<div class="pagin-box">
+							<a href="#" class="pagin-box__arrow pagin-box__arrow_prev">
+								<svg>
+									<use xlink:href="#arrow-long"></use>
+								</svg>
+							</a>
+							<div class="pagin-box__numbers">
+								<a href="#" class="pagin-box__number active">1</a>
+								<a href="#" class="pagin-box__number">2</a>
+								<a href="#" class="pagin-box__number">3</a>
+								<a href="#" class="pagin-box__number">4</a>
+								<a href="#" class="pagin-box__more">...</a>
+								<a href="#" class="pagin-box__number">5</a>
+							</div>
+							<a href="#" class="pagin-box__arrow pagin-box__arrow_next">
+								<svg>
+									<use xlink:href="#arrow-long"></use>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div><!--pagin-->
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__subscribe-mobile">
+						<div class="footer__subscribe__title">Подписаться на новости</div>
+						<form action="#" class="subscribe">
+							<input type="text" placeholder="Подписаться на новости ">
+							<button type="submit">
+								<svg>
+									<use xlink:href="#arrow-long"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+					<div class="footer-menu">
+						<div class="footer-menu__col">
+							<div class="footer-menu__block footer-menu__block_drop">
+								<div class="footer-menu__title">
+									<a href="#">О проекте</a>
+								</div>
+								<ul class="footer-menu__list">
+									<li><a href="#" class="footer-menu__link">О проекте</a></li>
+									<li><a href="#" class="footer-menu__link">Персонажи</a></li>
+									<li><a href="#" class="footer-menu__link">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="footer-menu__block footer-menu__block_mb-10">
+								<div class="footer-menu__title">
+									<a href="#">Разместить информацию</a>
+								</div>
+							</div>
+							<div class="footer-menu__block footer-menu__block_last">
+								<div class="footer-menu__title">
+									<a href="#">Реклама</a>
+								</div>
+							</div>
+							<div class="footer-menu__social">
+								<a href="mailto:info@pechorin.net " class="footer-menu__mail">info@pechorin. net</a>
+								<div class="social">
+									<div class="social__links">
+										<a href="#" class="social__icon" target="blank">
+											<svg>
+												<use xlink:href="#yt-icon"></use>
+											</svg>
+										</a>
+										<a href="#" class="social__icon" target="blank">
+											<svg>
+												<use xlink:href="#tw-icon"></use>
+											</svg>
+										</a>
+										<a href="#" class="social__icon" target="blank">
+											<svg>
+												<use xlink:href="#vk-icon"></use>
+											</svg>
+										</a>
+										<a href="#" class="social__icon" target="blank">
+											<svg>
+												<use xlink:href="#dz-icon"></use>
+											</svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__block footer-menu__block_drop">
+								<div class="footer-menu__title">
+									<a href="#">Статьи</a>
+								</div>
+								<ul class="footer-menu__list">
+									<li><a href="#" class="footer-menu__link">Рецензии</a></li>
+									<li><a href="#" class="footer-menu__link">Новости</a></li>
+									<li><a href="#" class="footer-menu__link">Мода перевода</a></li>
+									<li><a href="#" class="footer-menu__link">Блоги</a></li>
+									<li><a href="#" class="footer-menu__link">Интервью</a></li>
+									<li><a href="#" class="footer-menu__link">Обзоры</a></li>
+									<li><a href="#" class="footer-menu__link">Они ушли. Они остались</a></li>
+									<li><a href="#" class="footer-menu__link">Lectoриум</a></li>
+									<li><a href="#" class="footer-menu__link">Метаморфозы критики</a></li>
+									<li><a href="#" class="footer-menu__link">Забытый Нобель</a></li>
+									<li><a href="#" class="footer-menu__link">Здравые смыслы</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__block">
+								<div class="footer-menu__title">
+									<a href="#">РАЖ</a>
+								</div>
+							</div>
+							<div class="footer-menu__block footer-menu__block_drop">
+								<div class="footer-menu__title">
+									<a href="#">Публикации</a>
+								</div>
+								<ul class="footer-menu__list">
+									<li><a href="#" class="footer-menu__link">Толстые журналы</a></li>
+									<li><a href="#" class="footer-menu__link">Печатные издания</a></li>
+									<li><a href="#" class="footer-menu__link">Интернет-издания</a></li>
+									<li><a href="#" class="footer-menu__link">Иные проекты</a></li>
+									<li><a href="#" class="footer-menu__link">Добавить издание</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__block footer-menu__block_drop">
+								<div class="footer-menu__title">
+									<a href="#">Конкурсы</a>
+								</div>
+								<ul class="footer-menu__list">
+									<li><a href="#" class="footer-menu__link">Добавить конкурс</a></li>
+								</ul>
+							</div>
+							<div class="footer-menu__block footer-menu__block_drop">
+								<div class="footer-menu__title">
+									<a href="#">События</a>
+								</div>
+								<ul class="footer-menu__list">
+									<li><a href="#" class="footer-menu__link">Года</a></li>
+									<li><a href="#" class="footer-menu__link">Текущего месяца</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__block footer-menu__block_drop">
+								<div class="footer-menu__title">
+									<a href="#">Полезное</a>
+								</div>
+								<ul class="footer-menu__list">
+									<li><a href="#" class="footer-menu__link">Писателю</a></li>
+									<li><a href="#" class="footer-menu__link">Переводчику</a></li>
+									<li><a href="#" class="footer-menu__link">Другое</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="footer-menu__col">
+							<div class="footer-menu__block footer-menu__block_drop">
+								<div class="footer-menu__title">
+									<a href="#">Услуги</a>
+								</div>
+								<ul class="footer-menu__list">
+									<li><a href="#" class="footer-menu__link">Критика</a></li>
+									<li><a href="#" class="footer-menu__link">Редактура</a></li>
+									<li><a href="#" class="footer-menu__link">Обучение</a></li>
+									<li><a href="#" class="footer-menu__link">Иллюстрации</a></li>
+									<li><a href="#" class="footer-menu__link">Музыка и звук</a></li>
+									<li><a href="#" class="footer-menu__link">Фото и видео</a></li>
+									<li><a href="#" class="footer-menu__link">Продюсирование</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><!--/footer-menu-->
+					<div class="footer__row">
+						<div class="footer__logo">
+							<a href="#" class="logo">
+								<div class="logo__icon">
+									<img src="assets/images/logo.png" alt="">
+								</div>
+								<div class="logo__info">
+									<div class="logo__title">Pechorin.net</div>
+									<div class="logo__subtitle">Портал больших литературных<br> возможностей</div>
+								</div>
+							</a>
+						</div>
+						<div class="footer__subscribe">
+							<div class="footer__subscribe__title">Подписаться на новости</div>
+							<form action="#" class="subscribe">
+								<input type="text" placeholder="E-mail">
+								<button type="submit">
+									<svg>
+										<use xlink:href="#arrow-long"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+						<div class="footer__social">
+							<a href="mailto:info@pechorin.net " class="footer-menu__mail">info@pechorin. net</a>
+							<div class="social">
+								<div class="social__links">
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#yt-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#tw-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#vk-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="social__icon" target="blank">
+										<svg>
+											<use xlink:href="#dz-icon"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer__foot">
+						<div class="footer__copyright">© Pechorin.net 2019-2022</div>
+						<div class="footer__links">
+							<a href="#" class="footer__link">Правила пользования сайта </a>
+							<span>и </span>
+							<a href="#" class="footer__link">Политика конфиденциальности</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
