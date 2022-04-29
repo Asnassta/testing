@@ -680,6 +680,12 @@ body.hidden {
 /*=======/previews======*/
 
 /*========Events=====*/
+.events {
+	&__btn {
+		margin-top: 30px;
+	}
+}
+
 .events-box {
 	padding: 30px 0;
 	border-bottom: 1px solid $lgray;
@@ -1258,6 +1264,16 @@ body.hidden {
 	}
 }
 @media(max-width: 414px) {
+	.btn {
+		&_full {
+			width: 100%;
+			margin-right: 0;
+			&:before {
+				background: url("../images/encircle-decor2.svg") center no-repeat;
+				background-size: contain;
+			}
+		}
+	}
 	.intro {
 		&__item {
 			min-height: 455px;
@@ -1297,6 +1313,18 @@ body.hidden {
 			width: calc(50% - 30px);
 			margin-bottom: 10px;
 			margin-left: 0;
+		}
+	}
+	.events {
+		&__btn {
+			.btn {
+				width: 100%;
+				margin-right: 0;
+				&:before {
+					background: url("../images/encircle-decor2.svg") center no-repeat;
+					background-size: contain;
+				}
+			}
 		}
 	}
 }
