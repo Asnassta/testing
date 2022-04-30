@@ -243,6 +243,15 @@
 		&_small {
 			width: calc(25% - 30px);
 		}
+		&_between {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			.section__row {
+				height: 100%;
+				align-items: stretch;
+			}
+		}
 	}
 	&__row {
 		display: flex;
@@ -260,6 +269,19 @@
 		margin-bottom: 30px;
 		&:last-child {
 			margin-bottom: 0;
+		}
+		&_tall {
+			height: 100%;
+			.previews-box {
+				display: flex;
+				flex-direction: column;
+				&__info {
+					flex: 1 1 auto;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+				}
+			}
 		}
 	}
 	&__btn {

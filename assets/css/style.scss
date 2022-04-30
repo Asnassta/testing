@@ -632,6 +632,7 @@ body.hidden {
 /*=======Previews======*/
 .previews {
 	&-box {
+		height: 100%;
 		&_gray {
 			background-color: $gray;
 			.previews-box__info {
