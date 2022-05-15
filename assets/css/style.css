@@ -2709,7 +2709,7 @@ a.article-stat__item:hover .article-stat__info {
     cursor: pointer;
     position: absolute;
     right: 10px;
-    top: 30px;
+    top: 110px;
     z-index: 1000; }
     .modal__close svg {
       width: 11px;
@@ -3381,6 +3381,8 @@ a.article-stat__item:hover .article-stat__info {
       margin-bottom: 30px; }
   .modal__inner {
     padding-top: 15px; }
+  .modal__close {
+    top: 25px; }
   .send {
     padding: 40px 15px 40px 15px; }
     .send-form__inner {
