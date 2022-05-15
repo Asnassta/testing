@@ -3379,6 +3379,8 @@ a.article-stat__item:hover .article-stat__info {
     .add-form-captcha__input {
       margin-right: 0;
       margin-bottom: 30px; }
+  .modal__inner {
+    padding-top: 15px; }
   .send {
     padding: 40px 15px 40px 15px; }
     .send-form__inner {
