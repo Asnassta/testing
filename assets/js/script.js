@@ -225,6 +225,27 @@ $(".search-drop__close").on("click", function(){
   });
   /*==========/story__text (dropdown)=========*/
 
+  /*===============Modal=================*/
+  $(".modal-open").on("click", function(event) {
+    event.preventDefault();
+    $('.wrapper').addClass("norel");
+    $(this).parents(".article-box").find(".modal").fadeIn(333);
+ 
+    $(this).parents(".article-box").find('.modal').css('top', $(window).scrollTop()+'px');
+
+    $(this).parents(".article-box").find('.modal__inner').fadeIn(333);
+    $('body').addClass("hidden");
+    
+  });
+  $(".modal__close,  .closex").on("click", function(event) {
+    event.preventDefault();
+    $('.wrapper').removeClass("norel");
+    $(".modal").fadeOut('222');
+    $('body').removeClass("hidden");
+    
+  });
+/*==============/modal=================*/
+
   /*===========Slider-Intro============*/
   $('.intro__slider').slick({
   	infinite: true,
@@ -393,4 +414,10 @@ $(".search-drop__close").on("click", function(){
     n++
 }
 /*==========/bookself__slider======*/
+
+/*======Select-styler=============*/
+  $(function() {
+    $('select, .input-file').styler();
+  });
+  /*======/select-styler=============*/
 })

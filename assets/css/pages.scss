@@ -1139,6 +1139,34 @@
 		&:last-child {
 			margin-right: 0;
 		}
+		&_view {
+			.article-stat__icon {
+				width: 20px;
+				height: 16px;
+				position: relative;
+				transition: all .2s linear;
+				&:before {
+					content: "";
+					width: 20px;
+					height: 16px;
+					background: url("../images/eye_red.svg") center no-repeat;
+					background-size: contain;
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 2;
+					opacity: 0;
+					transition: all .2s linear;
+				}
+			}
+			&:hover {
+				.article-stat__icon {
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
 	}
 	&__icon {
 		margin-right: 8px;
@@ -1583,6 +1611,12 @@ margin-top: 50px;
 		img {
 			width: 100%;
 			max-width: 400px;
+			@media(min-width: 767px) {
+				height: 300px;
+			}
+			@media(min-width: 1200px) {
+				height: 400px;
+			}
 		}
 	}
 }
@@ -2092,6 +2126,474 @@ margin-top: 50px;
 
 /*=========/about========*/
 
+/*==================Modal================*/
+.modal {
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top:0px;
+	display: none;
+	overflow: auto;
+	left:0px;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+	padding-bottom: 100px;
+	z-index: 1000;
+	&.show {
+		visibility: visible;
+		opacity: 1;
+		transition: all 1.7s linear;
+	}
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		right: 10px;
+		top: 30px;
+		z-index: 1000;
+		svg {
+			width: 11px;
+			height: 11px;
+			stroke:  $bl;
+			transition: all .2s linear;
+		}
+		&:hover {
+			svg {
+				stroke: $red;
+			}
+		}
+	}
+	&__inner {
+		opacity: 1;
+		width: 1080px;
+		top: 0;
+		padding-bottom: 20px;
+		padding-top:100px;
+		left: 50%;
+		transform: translateX(-50%);
+		position: absolute;
+		display: none;
+		z-index: 2000;
+ 	}
+	.closex {
+		content:"";
+		top:0px;
+		left:0px;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+ 		z-index: 2000;
+	}
+}/*====/modal==*/
+
+/*======Send=====*/
+.send {
+	background-color: $wh;
+	padding: 40px 100px;
+	&__description {
+		font-family: $ff;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.2;
+		color: $bl;
+		margin-bottom: 30px;
+		a {
+			color: $red;
+			transition: all .2s linear;
+			text-decoration: underline;
+		}
+	}
+	&-recipient {
+		display: flex;
+		align-items: center;
+		margin: 0 auto;
+		max-width: 300px;
+		&__photo {
+			margin-right: 30px;
+			img {
+				width: 100px;
+				height: 100px;
+				object-fit: cover;
+			}
+		}
+		&__name {
+			font-family: $ff;
+			font-size: 19px;
+			font-weight: 500;
+			color: $bl;
+			line-height: 1.3;
+		}
+	}
+	&-form {
+		padding: 30px 100px;
+		margin-top: 40px;
+		border-top: 1px solid $lgray;
+		border-bottom: 1px solid $lgray;
+		&__inner {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -30px;
+			margin-bottom: -30px;
+			>* {
+				width: calc(50% - 30px);
+				margin-left: 30px;
+				margin-bottom: 30px;
+			}
+		}
+		&__input {
+			input {
+				width: 100%;
+				height: 100%;
+				background-color: $gray;
+				border-radius: 4px;
+				padding: 14px 16px;
+				font-family: $ff;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.2;
+				color: $bl;
+				&::placeholder {
+					opacity: 1;
+					color: #7D7D7D;
+				}
+			}
+		}
+		select {
+			width: 100%;
+			height: 100%;
+			background-color: $gray;
+			border-radius: 4px;
+			padding: 14px 16px;
+			font-family: $ff;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 1.2;
+			color: $bl;
+		}
+		&__checkbox {
+			display: flex;
+			position: relative;
+			label {
+				span {
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 1;
+					display: inline-block;
+					width: 15px;
+					height: 15px;
+					border: 1px solid $bl;
+					border-radius: 2px;
+					background-color: $wh;
+					cursor: pointer;
+				}
+				>i {
+					font-family: $ff;
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 1.2;
+					color: $bl;
+					display: inline-block;
+					font-style: normal;
+					cursor: pointer;
+					margin-left: 13px;
+				}
+			}
+			input {
+				width: 15px;
+				flex: 0 0 15px;
+				height: 15px;
+				border: 1px solid $bl;
+				border-radius: 2px;
+				background-color: $wh;
+				opacity: 0;
+				margin-right: 0;
+				&:checked+label span {
+					background: url("../images/check.svg") center no-repeat,  $gray;
+					background-size: 70% auto;
+					border-color: $red;
+				}
+			}
+		}
+	}
+	&__btn {
+		text-align: center;
+		margin-top: 30px;
+		.btn {
+			background-color: inherit;
+		}
+	}
+}
+/*======/send=====*/
+
+/*========Jq-selectbox=======*/
+.jq-selectbox {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	&:after {
+		content: "";
+		width: 12px;
+		height: 7px;
+		background: url("../images/arrow-small.svg") center no-repeat;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 16px;
+		z-index: 1;
+		transition: all .1s linear;
+	}
+	&.dropdown {
+		&:after {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+	&__select {
+		width: 100%;
+		height: 100%;
+		background-color: $gray;
+		padding: 14px 16px;
+		border-radius: 4px;
+		font-family: $ff;
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 1.2;
+		cursor: pointer;
+	}
+	&__dropdown {
+		width: 100%;
+		background-color: $gray;
+		border-radius: 4px;
+		li {
+			cursor: pointer;
+			padding: 14px 16px;
+			font-family: $ff;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 1.2;
+			color: $bl;
+			transition: all .2s linear;
+			border-bottom: 1px solid $lgray;
+			&:last-child {
+				border-bottom: none;
+			}
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}
+/*========/jq-selectbox=======*/
+ /*=========Jq-file=====*/
+ .jq-file {
+ 	width: 100%;
+ 	height: 100%;
+ 	padding: 14px 16px 14px 40px;
+ 	background-color: $bl;
+ 	border-radius: 4px;
+ 	color: $wh;
+ 	cursor: pointer;
+ 	position: relative;
+ 	&:before {
+ 		content: "";
+ 		width: 15px;
+ 		height: 20px;
+ 		background: url("../images/paperclip.svg") center no-repeat;
+ 		background-size: contain;
+ 		position: absolute;
+ 		top: 10px;
+ 		left: 16px;
+ 		z-index: 1;
+ 	}
+		&__name {
+			display: none;
+			line-height: 1.2;
+		}
+		&.changed {
+			.jq-file__name {
+				display: block;
+				line-height: 1.2;
+			}
+			.jq-file__browse {
+				display: none;
+			}
+		}
+	}
+	.input-file {
+		cursor: pointer;
+	}
+ /*=========/jq-file=====*/
+
+ /*=======Add=====*/
+ .add {
+ 	&-form {
+ 		&__row {
+ 			display: flex;
+ 			flex-wrap: wrap;
+ 			margin-left: -30px;
+ 			>* {
+ 				width: calc(33.33333% - 30px);
+ 				margin-left: 30px;
+ 				margin-bottom: 30px;
+ 			}
+ 		}
+ 		&__item {
+ 			margin-bottom: 30px;
+ 		}
+ 		&__title {
+ 			font-family: $ff;
+ 			font-size: 19px;
+ 			font-weight: 400;
+ 			line-height: 1.2;
+ 			margin-bottom: 10px;
+ 		}
+ 		&__input {
+ 			input {
+ 				width: 100%;
+ 				height: 100%;
+ 				background-color: $gray;
+ 				border-radius: 4px;
+ 				padding: 14px 16px;
+ 				font-family: $ff;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.2;
+				color: $bl;
+				&::placeholder {
+					opacity: 1;
+					color: #7D7D7D;
+				}
+ 			}
+ 		}
+ 		&__textarea {
+ 			textarea {
+ 				width: 100%;
+ 				height: 100%;
+ 				min-height: 120px;
+ 				resize: none;
+ 				background-color: $gray;
+ 				border-radius: 4px;
+ 				padding: 14px 16px;
+ 				font-family: $ff;
+				font-size: 15px;
+				font-weight: 400;
+				line-height: 1.2;
+				color: $bl;
+				&::placeholder {
+					opacity: 1;
+					color: #7D7D7D;
+				}
+ 			}
+ 		}
+ 		&__description {
+ 			font-family: $ff;
+ 			font-size: 15px;
+ 			font-weight: 400;
+ 			color: $bl;
+ 			line-height: 1.5;
+ 			margin-top: 10px;
+ 		}
+ 		&__radiobox {
+ 			display: flex;
+			position: relative;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			label {
+				span {
+					position: absolute;
+					left: 0;
+					top: 50%;
+					z-index: 1;
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					border: 1px solid $bl;
+					background-color: $wh;
+					cursor: pointer;
+					transform: translateY(-50%);
+				}
+				>i {
+					font-family: $ff;
+					font-weight: 400;
+					font-size: 15px;
+					line-height: 1.2;
+					color: $bl;
+					display: inline-block;
+					font-style: normal;
+					cursor: pointer;
+					margin-left: 13px;
+				}
+			}
+			input {
+				width: 16px;
+				flex: 0 0 16px;
+				height: 16px;
+				border: 1px solid $bl;
+				border-radius: 2px;
+				background-color: $wh;
+				opacity: 0;
+				margin-right: 0;
+				&:checked+label span {
+					border-color: $red;
+					&:before {
+						content: "";
+						width: 7px;
+						height: 7px;
+						border-radius: 50%;
+						background-color: $red;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						z-index: 1;
+						transform: translate3d(-50%, -50%, 0)
+					}
+				}
+			}
+ 		}
+ 		&-captcha {
+ 			display: flex;
+ 			margin-bottom: 40px;
+ 			&__input {
+ 				margin-right: 30px;
+ 				min-width: 300px;
+ 			}
+ 			&__img {
+ 				img {
+ 					display: block;
+ 					width: 280px;
+ 					height: 80px;
+ 				}
+ 			}
+ 			&__reload {
+ 				display: inline-block;
+ 				margin-top: 10px;
+ 				font-family: $ff;
+ 				font-size: 15px;
+ 				font-weight: 400;
+ 				color: $lgray;
+ 				line-height: 1.2;
+ 				transition: all .2s linear;
+ 				text-decoration: underline;
+ 			}
+ 		}
+ 		&__agree {
+ 			max-width: 400px;
+ 			font-family: $ff;
+ 			font-size: 15px;
+ 			font-weight: 400;
+ 			color: $lgray;
+ 			line-height: 1.2;
+ 			margin-top: 20px;
+ 			a {
+ 				color: $lgray;
+ 				text-decoration: underline;
+ 			}
+ 		}
+ 	}
+ }
+ /*=======/add=====*/
+
 /*========Adaptive======*/
 @media(max-width: 1300px) {
 	.bookself {
@@ -2102,6 +2604,16 @@ margin-top: 50px;
 	}
 }
 @media(max-width: 1200px) {
+	.modal {
+		&__inner {
+			width: 90%;
+		}
+	}
+	.send {
+		&-form {
+			padding: 30px 0;
+		}
+	}
 	.overview-modal {
 		&__inner {
 			width: 90%;
@@ -2361,6 +2873,36 @@ margin-top: 50px;
 	}
 }
 @media(max-width: 765px) {
+	.add {
+		&-form {
+			&__row {
+				margin-left: 0;
+				>* {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+			&-captcha {
+				flex-direction: column;
+				&__input {
+					margin-right: 0;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+	.send {
+		padding: 40px 15px 40px 15px;
+		&-form {
+			&__inner {
+				margin-left: 0;
+				>* {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+	}
 	.page {
 		&-info {
 			&_flex {
